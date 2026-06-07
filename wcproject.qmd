@@ -1,0 +1,296 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+```{r}
+library(readr)
+library(janitor)
+library(dplyr)
+
+url <- "https://opendata.muenchen.de/dataset/e3f5dbd2-39cc-40cd-bc91-4bb49a0b1802/resource/a641ce6a-4e01-4f4b-9976-1ae6a47e3762/download/bevolkerung_bezirke_neu.csv"
+
+bevoelkerung <- read_csv(url) |>
+  clean_names()
+
+
+```
+
+```{r}
+library(tidyverse)
+library(janitor)
+
+url <- "https://geoportal.muenchen.de/geoserver/gsm_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=gsm_wfs:vablock_stadtbezirk&outputFormat=csv"
+
+stadtbezirke <- readr::read_csv(url) |>
+  janitor::clean_names()
+
+glimpse(stadtbezirke)
+```
+
+```{r}
+
+```
+
+```{r}
+library(sf)
+library(tidyverse)
+
+url_geojson <- "https://geoportal.muenchen.de/geoserver/gsm_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=gsm_wfs:vablock_stadtbezirk&outputFormat=application/json"
+
+stadtbezirke_map <- sf::st_read(url_geojson)
+
+ggplot(stadtbezirke_map) +
+  geom_sf() +
+  labs(
+    title = "Stadtbezirke in München",
+    caption = "Quelle: Landeshauptstadt München – GeodatenService"
+  )
+```
+
+
+
+
+
+```{r}
+stadtbezirke_map <- stadtbezirke_map %>%
+  mutate(sb_nummer = as.numeric(sb_nummer))
+
+bevoelkerung <- bevoelkerung %>%
+  mutate(stadtbezirksnummer = as.numeric(stadtbezirksnummer))
+
+stadtbezirke_final <- stadtbezirke_map %>%
+  left_join(
+    bevoelkerung,
+    by = c("sb_nummer" = "stadtbezirksnummer")
+  )
+
+```
+
+
+
+```{r}
+ggplot(stadtbezirke_final) +
+  geom_sf(aes(fill = bevolkerung)) +
+  labs(
+    title = "Bevölkerung nach Stadtbezirk in München",
+    fill = "Bevölkerung"
+  )
+```
+
+```{r}
+wc <- read_csv("data/wc_finder_opendata.csv")
+```
+
+
+
+
+```{r}
+library(sf)
+library(dplyr)
+library(tidyr)
+
+
+wc_sf <- st_as_sf(
+  wc,
+  wkt = "shape",
+  crs = 25832
+)
+```
+
+```{r}
+wc_sf <- st_transform(
+  wc_sf,
+  st_crs(stadtbezirke_map)
+)
+```
+
+```{r}
+wc_bezirk <- st_join(
+  wc_sf,
+  stadtbezirke_map
+)
+```
+
+
+```{r}
+wc_count <- wc_bezirk %>%
+  st_drop_geometry() %>%
+  count(sb_nummer, sb_name, name = "anzahl_wc")
+```
+
+```{r}
+class(stadtbezirke_final$sb_nummer)
+
+class(stadtbezirke_final$bevolkerung)
+```
+
+```{r}
+stadtbezirke_final <- stadtbezirke_final %>%
+  mutate(
+    bevolkerung = as.numeric(bevolkerung)
+  )
+```
+
+```{r}
+stadtbezirke_final <- stadtbezirke_final %>%
+  left_join(wc_count, by = c( "sb_name"))
+  
+```
+
+```{r}
+stadtbezirke_final <- stadtbezirke_final %>%
+  select(-starts_with("anzahl_wc")) %>%
+  left_join(wc_count, by = "sb_name") %>%
+  mutate(
+    anzahl_wc = replace_na(anzahl_wc, 0),
+    wc_pro_10000 = anzahl_wc / bevolkerung * 10000
+  )
+
+```
+
+
+
+
+```{r}
+stadtbezirke_final <- stadtbezirke_final %>%
+  select(
+    id, sb_nummer, sb_name, flaeche_qm,
+    stadtbezirk, bevolkerung, einwohnerdichte,
+    anzahl_wc, geometry
+  ) %>%
+  mutate(
+    anzahl_wc = replace_na(anzahl_wc, 0),
+    bevolkerung = as.numeric(bevolkerung),
+    wc_pro_10000 = anzahl_wc / bevolkerung * 10000
+  )
+```
+
+```{r}
+ggplot(stadtbezirke_final) +
+  geom_sf(aes(fill = wc_pro_10000)) +
+  labs(
+    title = "Öffentliche Toiletten pro 10.000 Einwohner in München",
+    fill = "WC pro 10.000"
+  )
+```
+
+```{r}
+write_csv(stadtbezirke_final, "data/stadtbezirke_final.csv")
+```
+
+```{r}
+dir.create("figures")
+```
+
+```{r}
+ggsave(
+  "figures/wc_pro_10000_map.png",
+  width = 8,
+  height = 6
+)
+```
+
+```{r}
+stadtbezirke_final %>%
+  st_drop_geometry() %>%
+  arrange(wc_pro_10000) %>%
+  select(sb_name, bevolkerung, anzahl_wc, wc_pro_10000)
+```
+
+Diese Karte zeigt die Anzahl öffentlicher Toiletten pro 10.000 Einwohner\*innen in den Münchner Stadtbezirken. Dadurch wird sichtbar, welche Stadtbezirke im Verhältnis zur Bevölkerungszahl besser oder schlechter versorgt sind.
+
+```{r}
+ggplot(stadtbezirke_final) +
+  geom_sf(aes(fill = anzahl_wc)) +
+  labs(
+    title = "Anzahl öffentlicher Toiletten in München",
+    fill = "Anzahl WC"
+  )
+
+```
+
+```{r}
+# R/calc_wc_density.R
+
+calc_wc_density <- function(data){
+
+  data %>%
+    mutate(
+      wc_pro_10000 =
+        anzahl_wc / bevolkerung * 10000
+    )
+
+}
+```
+
+```{r}
+# R/plot_wc_total.R
+
+plot_wc_total <- function(data){
+
+  ggplot(data) +
+    geom_sf(aes(fill = anzahl_wc)) +
+    labs(
+      title = "Public toilets in Munich",
+      fill = "Toilets"
+    )
+
+}
+
+```
+
+```{r}
+# R/plot_wc_density.R
+
+plot_wc_density <- function(data){
+
+  ggplot(data) +
+    geom_sf(aes(fill = wc_pro_10000)) +
+    labs(
+      title =
+      "Public toilets per 10,000 residents",
+      fill = "WC per 10,000"
+    )
+
+}
+```
+
+```{r}
+# R/top_districts.R
+
+top_districts <- function(data){
+
+  data %>%
+    st_drop_geometry() %>%
+    arrange(desc(wc_pro_10000))
+
+}
+
+```
+
+```{r}
+plot_wc_density(stadtbezirke_final)
+
+plot_wc_total(stadtbezirke_final)
+
+top_districts(stadtbezirke_final)
+```
+
+```{r}
+library(tidyverse)
+library(sf)
+
+source("R/plot_wc_density.R")
+source("R/plot_wc_total.R")
+source("R/top_districts.R")
+```
+
+```{r}
+plot_wc_density(stadtbezirke_final)
+
+plot_wc_total(stadtbezirke_final)
+
+top_districts(stadtbezirke_final)
+```

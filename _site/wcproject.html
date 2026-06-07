@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Untitled – Munich public Toilets</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Munich public Toilets</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./wcproject.html" aria-current="page"> 
+<span class="menu-text">Analysis</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Untitled</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 27
+Columns: 5
+$ fid        &lt;chr&gt; "vablock_stadtbezirk.1", "vablock_stadtbezirk.2", "vablock_…
+$ sb_nummer  &lt;chr&gt; "04", "19", "19", "15", "21", "02", "10", "23", "24", "18",…
+$ sb_name    &lt;chr&gt; "Schwabing-West", "Thalkirchen-Obersendling-Forstenried-Für…
+$ flaeche_qm &lt;dbl&gt; 4363287, 17763490, 17763490, 22453922, 16497539, 4401651, 1…
+$ shape      &lt;chr&gt; "POLYGON ((691821.8368008411 5339259.124697947, 691767.2908…</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `OGRGeoJSON' from data source 
+  `https://geoportal.muenchen.de/geoserver/gsm_wfs/ows?service=WFS&amp;version=1.0.0&amp;request=GetFeature&amp;typeName=gsm_wfs:vablock_stadtbezirk&amp;outputFormat=application/json' 
+  using driver `GeoJSON'
+Simple feature collection with 27 features and 4 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: 675559.4 ymin: 5326194 xmax: 702569.8 ymax: 5346902
+Projected CRS: ETRS89 / UTM zone 32N</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "stadtbezirksnummer"     "stadtbezirk"            "bevolkerung"           
+[4] "bevolkerung_in_prozent" "flache_in_ha"           "flache_in_prozent"     
+[7] "einwohnerdichte"       </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "id"         "sb_nummer"  "sb_name"    "flaeche_qm" "geometry"  </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 7
+  stadtbezirksnummer stadtbezirk bevolkerung bevolkerung_in_prozent flache_in_ha
+               &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;                        &lt;dbl&gt;        &lt;dbl&gt;
+1                  1 Altstadt -… 20876                          1.3         315.
+2                  2 Ludwigsvor… 50081                          3.1         440.
+3                  3 Maxvorstadt 52434                          3.3         430.
+4                  4 Schwabing … 68610                          4.3         436.
+5                  5 Au - Haidh… 63972                          4           422 
+6                  6 Sendling    41002                          2.6         394.
+# ℹ 2 more variables: flache_in_prozent &lt;dbl&gt;, einwohnerdichte &lt;dbl&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 6 features and 4 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: 680906.8 ymin: 5326194 xmax: 702569.8 ymax: 5339295
+Projected CRS: ETRS89 / UTM zone 32N
+                     id sb_nummer
+1 vablock_stadtbezirk.1        04
+2 vablock_stadtbezirk.2        19
+3 vablock_stadtbezirk.3        19
+4 vablock_stadtbezirk.4        15
+5 vablock_stadtbezirk.5        21
+6 vablock_stadtbezirk.6        02
+                                                 sb_name flaeche_qm
+1                                         Schwabing-West    4363287
+2 Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln   17763490
+3 Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln   17763490
+4                                         Trudering-Riem   22453922
+5                                     Pasing-Obermenzing   16497539
+6                           Ludwigsvorstadt-Isarvorstadt    4401651
+                        geometry
+1 POLYGON ((691821.8 5339259,...
+2 POLYGON ((685540.5 5327535,...
+3 POLYGON ((689968.5 5331316,...
+4 POLYGON ((698523.6 5337387,...
+5 POLYGON ((682919.4 5338681,...
+6 POLYGON ((689722.8 5335359,...</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "id"                     "sb_nummer"              "sb_name"               
+ [4] "flaeche_qm"             "stadtbezirk"            "bevolkerung"           
+ [7] "bevolkerung_in_prozent" "flache_in_ha"           "flache_in_prozent"     
+[10] "einwohnerdichte"        "geometry"              </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "FID"                                 "name"                               
+ [3] "stadt"                               "plz"                                
+ [5] "strasse"                             "hausnr"                             
+ [7] "etage"                               "raumnummer"                         
+ [9] "oeffnungszeiten"                     "kategorie"                          
+[11] "preis"                               "wickeln"                            
+[13] "standort_beschreibung"               "zustand"                            
+[15] "einschraenkungen"                    "mail"                               
+[17] "website"                             "telefon"                            
+[19] "zustaendiges_referat"                "erzeugt_bearbeitet"                 
+[21] "din_18040_1"                         "toilette_fuer_alle"                 
+[23] "eignung_blindenhunde"                "eingangstuer_typ"                   
+[25] "eingangstuer_glasmarkierung"         "eingangstuer_klingel_taster"        
+[27] "eingangstuer_leichte_fuehrung"       "eingangstuer_radar_schluessel"      
+[29] "eingangstuer_euro_schluessel"        "eingangstuer_wendekreis"            
+[31] "eingangstuer_breite"                 "rampe"                              
+[33] "rampe_steigung"                      "treppe_vorhanden"                   
+[35] "treppe_antirutsch"                   "treppe_blindenschrift"              
+[37] "treppe_gelaender"                    "treppe_kontrast_visuell"            
+[39] "treppe_kontrast_taktil"              "treppe_stufenanzahl"                
+[41] "treppe_stufenhoehe"                  "rollstuhllift"                      
+[43] "eingangsbereich_beschreibung"        "gebaeudeinneres_gangbreite"         
+[45] "gebaeudeinneres_induktionsschleifen" "gebaeudeinneres_fuehrungsrillen"    
+[47] "gebaeudeinneres_ruhig"               "gebaeudeinneres_beleuchtet"         
+[49] "aufzug_vorhanden"                    "aufzug_tuerbreite"                  
+[51] "aufzug_tiefe"                        "aufzug_breite"                      
+[53] "wctuer_typ"                          "wctuer_glasmarkierung"              
+[55] "wctuer_klingel_taster"               "wctuer_leichte_fuehrung"            
+[57] "wctuer_radar_schluessel"             "wctuer_euro_schluessel"             
+[59] "wctuer_wendekreis"                   "wctuer_breite"                      
+[61] "wctuer_bemerkung"                    "wc_badewanne"                       
+[63] "wc_dusche"                           "wc_spiegel"                         
+[65] "wc_gelaender"                        "wc_deckenlifter"                    
+[67] "wc_standlifter"                      "wc_liege"                           
+[69] "wc_spiegelhoehe"                     "wc_handtuchspenderhoehe"            
+[71] "wc_seifenspender_hoehe"              "wc_waschbecken_oberkante"           
+[73] "wc_waschbecken_hoehe_unterfahrbar"   "wc_waschbecken_tiefe_unterfahrbar"  
+[75] "wc_buegel_rechts"                    "wc_buegel_links"                    
+[77] "wc_buegel_distanz"                   "wc_buegelhoehe"                     
+[79] "wc_sitzhoehe"                        "wc_platz_davor"                     
+[81] "wc_platz_rechts"                     "wc_platz_links"                     
+[83] "wc_spuelknopf_hinten"                "wc_spuelknopf_rechts"               
+[85] "wc_spuelknopf_links"                 "wc_spuelknopf_hoehe"                
+[87] "wc_position_notruf"                  "wc_hoehe_notruf"                    
+[89] "wc_bermerkung"                       "foto"                               
+[91] "shape"                              </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 91
+  FID          name  stadt   plz strasse hausnr etage raumnummer oeffnungszeiten
+  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;          
+1 wc_finder_o… Öffe… Münc… 80804 Brunne… &lt;NA&gt;   EG    6002 (DSM… Durchgehend    
+2 wc_finder_o… Öffe… Münc… 80339 10m v.… &lt;NA&gt;   EG    6003 (DSM… Durchgehend    
+3 wc_finder_o… Öffe… Münc… 80992 36m v.… &lt;NA&gt;   EG    6004 (DSM… Durchgehend    
+4 wc_finder_o… Öffe… Münc… 81667 17m v.… &lt;NA&gt;   EG    6005 (DSM… Durchgehend    
+5 wc_finder_o… Besu… Münc… 80637 Baldur… 28     EG    &lt;NA&gt;       Täglich währen…
+6 wc_finder_o… Besu… Münc… 80637 Baldur… 28     EG    &lt;NA&gt;       Täglich währen…
+# ℹ 82 more variables: kategorie &lt;chr&gt;, preis &lt;dbl&gt;, wickeln &lt;dbl&gt;,
+#   standort_beschreibung &lt;chr&gt;, zustand &lt;chr&gt;, einschraenkungen &lt;chr&gt;,
+#   mail &lt;chr&gt;, website &lt;chr&gt;, telefon &lt;chr&gt;, zustaendiges_referat &lt;chr&gt;,
+#   erzeugt_bearbeitet &lt;chr&gt;, din_18040_1 &lt;dbl&gt;, toilette_fuer_alle &lt;dbl&gt;,
+#   eignung_blindenhunde &lt;dbl&gt;, eingangstuer_typ &lt;chr&gt;,
+#   eingangstuer_glasmarkierung &lt;dbl&gt;, eingangstuer_klingel_taster &lt;dbl&gt;,
+#   eingangstuer_leichte_fuehrung &lt;dbl&gt;, eingangstuer_radar_schluessel &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame" </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "POINT (690895.8300008213 5338610.019998008)" 
+[2] "POINT (688566.0000007733 5334578.0999981575)"
+[3] "POINT (686327.1300007277 5339290.969998273)" 
+[4] "POINT (693678.1400008835 5333795.669997834)" 
+[5] "POINT (687776.6700007569 5338200.429998195)" 
+[6] "POINT (687779.0500007567 5338200.709998195)" </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "FID"                                 "name"                               
+ [3] "stadt"                               "plz"                                
+ [5] "strasse"                             "hausnr"                             
+ [7] "etage"                               "raumnummer"                         
+ [9] "oeffnungszeiten"                     "kategorie"                          
+[11] "preis"                               "wickeln"                            
+[13] "standort_beschreibung"               "zustand"                            
+[15] "einschraenkungen"                    "mail"                               
+[17] "website"                             "telefon"                            
+[19] "zustaendiges_referat"                "erzeugt_bearbeitet"                 
+[21] "din_18040_1"                         "toilette_fuer_alle"                 
+[23] "eignung_blindenhunde"                "eingangstuer_typ"                   
+[25] "eingangstuer_glasmarkierung"         "eingangstuer_klingel_taster"        
+[27] "eingangstuer_leichte_fuehrung"       "eingangstuer_radar_schluessel"      
+[29] "eingangstuer_euro_schluessel"        "eingangstuer_wendekreis"            
+[31] "eingangstuer_breite"                 "rampe"                              
+[33] "rampe_steigung"                      "treppe_vorhanden"                   
+[35] "treppe_antirutsch"                   "treppe_blindenschrift"              
+[37] "treppe_gelaender"                    "treppe_kontrast_visuell"            
+[39] "treppe_kontrast_taktil"              "treppe_stufenanzahl"                
+[41] "treppe_stufenhoehe"                  "rollstuhllift"                      
+[43] "eingangsbereich_beschreibung"        "gebaeudeinneres_gangbreite"         
+[45] "gebaeudeinneres_induktionsschleifen" "gebaeudeinneres_fuehrungsrillen"    
+[47] "gebaeudeinneres_ruhig"               "gebaeudeinneres_beleuchtet"         
+[49] "aufzug_vorhanden"                    "aufzug_tuerbreite"                  
+[51] "aufzug_tiefe"                        "aufzug_breite"                      
+[53] "wctuer_typ"                          "wctuer_glasmarkierung"              
+[55] "wctuer_klingel_taster"               "wctuer_leichte_fuehrung"            
+[57] "wctuer_radar_schluessel"             "wctuer_euro_schluessel"             
+[59] "wctuer_wendekreis"                   "wctuer_breite"                      
+[61] "wctuer_bemerkung"                    "wc_badewanne"                       
+[63] "wc_dusche"                           "wc_spiegel"                         
+[65] "wc_gelaender"                        "wc_deckenlifter"                    
+[67] "wc_standlifter"                      "wc_liege"                           
+[69] "wc_spiegelhoehe"                     "wc_handtuchspenderhoehe"            
+[71] "wc_seifenspender_hoehe"              "wc_waschbecken_oberkante"           
+[73] "wc_waschbecken_hoehe_unterfahrbar"   "wc_waschbecken_tiefe_unterfahrbar"  
+[75] "wc_buegel_rechts"                    "wc_buegel_links"                    
+[77] "wc_buegel_distanz"                   "wc_buegelhoehe"                     
+[79] "wc_sitzhoehe"                        "wc_platz_davor"                     
+[81] "wc_platz_rechts"                     "wc_platz_links"                     
+[83] "wc_spuelknopf_hinten"                "wc_spuelknopf_rechts"               
+[85] "wc_spuelknopf_links"                 "wc_spuelknopf_hoehe"                
+[87] "wc_position_notruf"                  "wc_hoehe_notruf"                    
+[89] "wc_bermerkung"                       "foto"                               
+[91] "shape"                               "id"                                 
+[93] "sb_nummer"                           "sb_name"                            
+[95] "flaeche_qm"                         </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "id"                     "sb_nummer.x"            "sb_name"               
+ [4] "flaeche_qm"             "stadtbezirk"            "bevolkerung"           
+ [7] "bevolkerung_in_prozent" "flache_in_ha"           "flache_in_prozent"     
+[10] "einwohnerdichte"        "sb_nummer.y"            "sb_nummer"             
+[13] "anzahl_wc"              "geometry"               "wc_pro_10000"          </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                  sb_name bevolkerung anzahl_wc
+1                                      Pasing-Obermenzing       81804         5
+2                                      Schwabing-Freimann       77092         6
+3                                        Schwanthalerhöhe       28684         3
+4                                            Berg am Laim       47367         5
+5                                     Allach-Untermenzing       36230         4
+6                                      Ramersdorf-Perlach      120776        16
+7                                             Bogenhausen       95475        13
+8                                             Maxvorstadt       52434         8
+9  Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln      103717        18
+10 Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln      103717        18
+11                                                Moosach       56015        10
+12                                         Schwabing-West       68610        13
+13                                                   Laim       57116        11
+14                                         Trudering-Riem       76280        15
+15                                      Sendling-Westpark       62240        13
+16                                 Feldmoching-Hasenbergl       63756        14
+17                                Untergiesing-Harlaching       54067        13
+18                                Untergiesing-Harlaching       54067        13
+19                                  Milbertshofen-Am Hart       77281        19
+20                                          Au-Haidhausen       63972        17
+21                                                 Hadern       51637        18
+22                           Ludwigsvorstadt-Isarvorstadt       50081        18
+23                                               Sendling       41002        15
+24                                Obergiesing-Fasangarten       54352        22
+25                                         Altstadt-Lehel       20876        17
+26                             Aubing-Lochhausen-Langwied          NA         6
+27                                  Neuhausen-Nymphenburg          NA         9
+   wc_pro_10000
+1     0.6112171
+2     0.7782909
+3     1.0458792
+4     1.0555872
+5     1.1040574
+6     1.3247665
+7     1.3616130
+8     1.5257276
+9     1.7354918
+10    1.7354918
+11    1.7852361
+12    1.8947675
+13    1.9259052
+14    1.9664394
+15    2.0886889
+16    2.1958718
+17    2.4044241
+18    2.4044241
+19    2.4585603
+20    2.6574126
+21    3.4858725
+22    3.5941774
+23    3.6583581
+24    4.0476891
+25    8.1433225
+26           NA
+27           NA</code></pre>
+</div>
+</div>
+<p>Diese Karte zeigt die Anzahl öffentlicher Toiletten pro 10.000 Einwohner*innen in den Münchner Stadtbezirken. Dadurch wird sichtbar, welche Stadtbezirke im Verhältnis zur Bevölkerungszahl besser oder schlechter versorgt sind.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-35-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                       id sb_nummer
+1  vablock_stadtbezirk.20         1
+2  vablock_stadtbezirk.16        17
+3  vablock_stadtbezirk.15         6
+4   vablock_stadtbezirk.6         2
+5  vablock_stadtbezirk.23        20
+6  vablock_stadtbezirk.17         5
+7  vablock_stadtbezirk.26        11
+8  vablock_stadtbezirk.10        18
+9  vablock_stadtbezirk.11        18
+10  vablock_stadtbezirk.9        24
+11 vablock_stadtbezirk.12         7
+12  vablock_stadtbezirk.4        15
+13 vablock_stadtbezirk.19        25
+14  vablock_stadtbezirk.1         4
+15  vablock_stadtbezirk.7        10
+16  vablock_stadtbezirk.2        19
+17  vablock_stadtbezirk.3        19
+18 vablock_stadtbezirk.14         3
+19 vablock_stadtbezirk.24        13
+20 vablock_stadtbezirk.18        16
+21  vablock_stadtbezirk.8        23
+22 vablock_stadtbezirk.21        14
+23 vablock_stadtbezirk.13         8
+24 vablock_stadtbezirk.27        12
+25  vablock_stadtbezirk.5        21
+26 vablock_stadtbezirk.22        22
+27 vablock_stadtbezirk.25         9
+                                                  sb_name flaeche_qm
+1                                          Altstadt-Lehel    3145888
+2                                 Obergiesing-Fasangarten    5720866
+3                                                Sendling    3938932
+4                            Ludwigsvorstadt-Isarvorstadt    4401651
+5                                                  Hadern    9223789
+6                                           Au-Haidhausen    4219983
+7                                   Milbertshofen-Am Hart   13417212
+8                                 Untergiesing-Harlaching    8057218
+9                                 Untergiesing-Harlaching    8057218
+10                                 Feldmoching-Hasenbergl   28938452
+11                                      Sendling-Westpark    7814853
+12                                         Trudering-Riem   22453922
+13                                                   Laim    5286015
+14                                         Schwabing-West    4363287
+15                                                Moosach   11093673
+16 Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln   17763490
+17 Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln   17763490
+18                                            Maxvorstadt    4298192
+19                                            Bogenhausen   23712962
+20                                     Ramersdorf-Perlach   19897136
+21                                    Allach-Untermenzing   15451185
+22                                           Berg am Laim    6315331
+23                                       Schwanthalerhöhe    2070313
+24                                     Schwabing-Freimann   25674767
+25                                     Pasing-Obermenzing   16497539
+26                             Aubing-Lochhausen-Langwied   34057322
+27                                  Neuhausen-Nymphenburg   12914864
+                                                      stadtbezirk bevolkerung
+1                                                Altstadt - Lehel       20876
+2                                       Obergiesing - Fasangarten       54352
+3                                                        Sendling       41002
+4                                  Ludwigsvorstadt - Isarvorstadt       50081
+5                                                          Hadern       51637
+6                                                 Au - Haidhausen       63972
+7                                         Milbertshofen - Am Hart       77281
+8                                       Untergiesing - Harlaching       54067
+9                                       Untergiesing - Harlaching       54067
+10                                       Feldmoching - Hasenbergl       63756
+11                                            Sendling - Westpark       62240
+12                                               Trudering - Riem       76280
+13                                                           Laim       57116
+14                                                 Schwabing West       68610
+15                                                        Moosach       56015
+16 Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln      103717
+17 Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln      103717
+18                                                    Maxvorstadt       52434
+19                                                    Bogenhausen       95475
+20                                           Ramersdorf - Perlach      120776
+21                                          Allach - Untermenzing       36230
+22                                                   Berg am Laim       47367
+23                                               Schwanthalerhöhe       28684
+24                                           Schwabing - Freimann       77092
+25                                           Pasing - Obermenzing       81804
+26                                 Aubing - Lochhausen - Langwied          NA
+27                                        Neuhausen - Nymphenburg          NA
+   einwohnerdichte anzahl_wc wc_pro_10000
+1               66        17    8.1433225
+2               95        22    4.0476891
+3              104        15    3.6583581
+4              114        18    3.5941774
+5               56        18    3.4858725
+6              152        17    2.6574126
+7               58        19    2.4585603
+8               67        13    2.4044241
+9               67        13    2.4044241
+10              22        14    2.1958718
+11              80        13    2.0886889
+12              34        15    1.9664394
+13             108        11    1.9259052
+14             157        13    1.8947675
+15              50        10    1.7852361
+16              58        18    1.7354918
+17              58        18    1.7354918
+18             122         8    1.5257276
+19              40        13    1.3616130
+20              61        16    1.3247665
+21              23         4    1.1040574
+22              75         5    1.0555872
+23             139         3    1.0458792
+24              30         6    0.7782909
+25              50         5    0.6112171
+26              18         6           NA
+27              79         9           NA</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="wcproject_files/figure-html/unnamed-chunk-37-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                  sb_name bevolkerung anzahl_wc
+1                                          Altstadt-Lehel       20876        17
+2                                 Obergiesing-Fasangarten       54352        22
+3                                                Sendling       41002        15
+4                            Ludwigsvorstadt-Isarvorstadt       50081        18
+5                                                  Hadern       51637        18
+6                                           Au-Haidhausen       63972        17
+7                                   Milbertshofen-Am Hart       77281        19
+8                                 Untergiesing-Harlaching       54067        13
+9                                 Untergiesing-Harlaching       54067        13
+10                                 Feldmoching-Hasenbergl       63756        14
+11                                      Sendling-Westpark       62240        13
+12                                         Trudering-Riem       76280        15
+13                                                   Laim       57116        11
+14                                         Schwabing-West       68610        13
+15                                                Moosach       56015        10
+16 Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln      103717        18
+17 Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln      103717        18
+18                                            Maxvorstadt       52434         8
+19                                            Bogenhausen       95475        13
+20                                     Ramersdorf-Perlach      120776        16
+21                                    Allach-Untermenzing       36230         4
+22                                           Berg am Laim       47367         5
+23                                       Schwanthalerhöhe       28684         3
+24                                     Schwabing-Freimann       77092         6
+25                                     Pasing-Obermenzing       81804         5
+26                             Aubing-Lochhausen-Langwied          NA         6
+27                                  Neuhausen-Nymphenburg          NA         9
+   wc_pro_10000
+1     8.1433225
+2     4.0476891
+3     3.6583581
+4     3.5941774
+5     3.4858725
+6     2.6574126
+7     2.4585603
+8     2.4044241
+9     2.4044241
+10    2.1958718
+11    2.0886889
+12    1.9664394
+13    1.9259052
+14    1.8947675
+15    1.7852361
+16    1.7354918
+17    1.7354918
+18    1.5257276
+19    1.3616130
+20    1.3247665
+21    1.1040574
+22    1.0555872
+23    1.0458792
+24    0.7782909
+25    0.6112171
+26           NA
+27           NA</code></pre>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

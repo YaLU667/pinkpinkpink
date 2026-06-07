@@ -3,15 +3,23 @@ title: "Munich Public Toilets"
 format: 
   html:
     code-fold: true
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
-# Munich Public Toilets
+# 
 
 This project analyses the distribution of public toilets across Munich districts.
 
 ## Research Question
 
-Are public toilets evenly distributed across Munich districts?
+1.  How are public toilets distributed across Munich districts?
+
+2.  Which districts have the highest and lowest number of public toilets?
+
+3.  Is population density associated with public toilet availability?
 
 ## Data
 
@@ -90,6 +98,8 @@ ggplot(
   )
 
 ```
+
+## Key Findings
 
 ## Conclusion
 

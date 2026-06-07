@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  title: "Munich public Toilets"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+
+      - href: wcproject.qmd
+        text: Analysis
+
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+execute:
+  echo: false
+  warning: false
+  message: false
