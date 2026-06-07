@@ -1,0 +1,96 @@
+---
+title: "Munich Public Toilets"
+format: 
+  html:
+    code-fold: true
+---
+
+# Munich Public Toilets
+
+This project analyses the distribution of public toilets across Munich districts.
+
+## Research Question
+
+Are public toilets evenly distributed across Munich districts?
+
+## Data
+
+We use data on:
+
+-   public toilets in Munich
+-   population by district
+-   area and population density by district
+
+## Number of Public Toilets
+
+```{r}
+library(tidyverse)
+munich_data <- read.csv("data/stadtbezirke_final.csv")
+```
+
+```{r}
+ggplot(munich_data, aes(x = reorder(sb_name, anzahl_wc), y = anzahl_wc)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Number of Public Toilets by District",
+    x = "District",
+    y = "Number of public toilets"
+  )
+
+```
+
+## Public Toilets per 10,000 Residents
+
+```{r}
+ggplot(munich_data, aes(x = reorder(sb_name, wc_pro_10000), y = wc_pro_10000)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Public Toilets per 10,000 Residents",
+    x = "District",
+    y = "WC per 10,000 residents"
+  )
+```
+
+## Population Density and Public Toilets
+
+```{r}
+
+ggplot(munich_data, aes(x = einwohnerdichte, y = anzahl_wc)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Population Density and Number of Public Toilets",
+    x = "Population density",
+    y = "Number of public toilets"
+  )
+```
+
+## Top 10 Districts by number of Public Toilets
+
+```{r}
+top10 <- munich_data |>
+  arrange(desc(anzahl_wc)) |>
+  slice_head(n = 10)
+
+ggplot(
+  top10,
+  aes(
+    x = reorder(sb_name, anzahl_wc),
+    y = anzahl_wc
+  )
+) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Top 10 Districts by Number of Public Toilets",
+    x = "District",
+    y = "Number of Public Toilets"
+  )
+
+```
+
+## Conclusion
+
+The results suggest that population density is not strongly associated with the number of public toilets. Some districts with high population density have relatively few public toilets, while others have many. This indicates that factors others than population density may influence the distribution of public toilets in Munich. Future analyses could include tourist numbers, public transport hubs, or district size.
