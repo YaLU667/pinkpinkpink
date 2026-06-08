@@ -21,13 +21,43 @@ This project analyses the distribution of public toilets across Munich districts
 
 3.  Is population density associated with public toilet availability?
 
-## Data
+## Data and licences
 
 We use data on:
 
 -   public toilets in Munich
+
 -   population by district
+
 -   area and population density by district
+
+
+
+Our main data set:
+
+  - "Bevölkerung in den Stadtbezirken" 
+  (URL: https://opendata.muenchen.de/dataset/bevoelkerung-stadtbezirken) provided by the 
+  statistical department of the regional capital Munich
+  under the "Datenlizenz Deutschland – Namensnennung – Version 2.0" 
+  as outlined in : www.govdata.de/dl-de/by-2-0 .
+  It allows free universal use under the condition of properly naming the data set and its 
+  creator.
+
+
+Visualisation / map of Munich with subdivisions :
+   
+  - https://geoportal.muenchen.de/portal/opendata/ , also provided by the statistical department 
+  of Munich under "Datenlizenz Deutschland – Namensnennung – Version 2.0" as stated above.
+  
+  The exact data we used can be downloaded here: 
+  
+  CVS data set with population:  (https://opendata.muenchen.de/dataset/e3f5dbd2-39cc-40cd-bc91-4bb49a0b1802/resource/a641ce6a-4e01-4f4b-9976-1ae6a47e3762/download/bevolkerung_bezirke_neu.csv).
+  
+  Map:
+  (https://geoportal.muenchen.de/geoserver/gsm_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=gsm_wfs:vablock_stadtbezirk&outputFormat=application/json).
+
+  
+
 
 ## Number of Public Toilets
 
