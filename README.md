@@ -23,4 +23,4 @@ How are public toilets distributed across Munich districts?
 
 ## Authors
 
-- Yaxuan Li, Ling Hu
+- Yaxuan Li, Ling Hu, Jonathan Knauf

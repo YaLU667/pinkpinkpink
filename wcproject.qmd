@@ -34,6 +34,7 @@ glimpse(stadtbezirke)
 ```
 
 ```{r}
+#install.packages("sf")
 library(sf)
 library(tidyverse)
 
@@ -48,10 +49,6 @@ ggplot(stadtbezirke_map) +
     caption = "Quelle: Landeshauptstadt München – GeodatenService"
   )
 ```
-
-
-
-
 
 ```{r}
 stadtbezirke_map <- stadtbezirke_map %>%
@@ -68,8 +65,6 @@ stadtbezirke_final <- stadtbezirke_map %>%
 
 ```
 
-
-
 ```{r}
 ggplot(stadtbezirke_final) +
   geom_sf(aes(fill = bevolkerung)) +
@@ -82,9 +77,6 @@ ggplot(stadtbezirke_final) +
 ```{r}
 wc <- read_csv("data/wc_finder_opendata.csv")
 ```
-
-
-
 
 ```{r}
 library(sf)
@@ -112,7 +104,6 @@ wc_bezirk <- st_join(
   stadtbezirke_map
 )
 ```
-
 
 ```{r}
 wc_count <- wc_bezirk %>%
@@ -149,9 +140,6 @@ stadtbezirke_final <- stadtbezirke_final %>%
   )
 
 ```
-
-
-
 
 ```{r}
 stadtbezirke_final <- stadtbezirke_final %>%
