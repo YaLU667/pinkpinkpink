@@ -1,0 +1,254 @@
+---
+title: "Group Reflection"
+editor: visual
+---
+
+# Group Reflection
+
+---
+title: "Group Reflection"
+---
+
+# Group Reflection
+
+## Skills inventory
+
+### Functions & refactoring (W2)
+
+**What we did:**
+
+We created reusable R functions for repetitive tasks such as data cleaning and indicator calculations. We also organised the project into separate scripts to make the workflow easier to maintain.
+
+**What worked well:**
+
+Using functions reduced duplicated code and made later changes much easier.
+
+**What was hard:**
+
+It was initially difficult to decide which parts of the code should become reusable functions.
+
+------------------------------------------------------------------------
+
+### Debugging (W3)
+
+**What we did:**
+
+We debugged errors related to joins, spatial objects, missing values and inconsistent variable names.
+
+**What worked well:**
+
+Breaking the code into smaller steps helped identify problems quickly.
+
+**What was hard:**
+
+Some errors originated from incompatible data types and spatial data structures, which were difficult to locate.
+
+------------------------------------------------------------------------
+
+### Version control & remotes (W4)
+
+**What we did:**
+
+We used GitHub to store the project, track changes and collaborate on the analysis.
+
+**What worked well:**
+
+GitHub provided a reliable backup and allowed us to keep the project organised.
+
+**What was hard:**
+
+Merge conflicts and keeping files synchronised required attention.
+
+------------------------------------------------------------------------
+
+### Quarto websites & collaborative coding (W5)
+
+**What we did:**
+
+We created a Quarto website to present our analysis, maps and conclusions.
+
+**What worked well:**
+
+Quarto combined code, text and figures into a clear and reproducible report.
+
+**What was hard:**
+
+Formatting pages and ensuring all links rendered correctly required several revisions.
+
+------------------------------------------------------------------------
+
+### R packages (W6)
+
+**What we did:**
+
+We mainly used tidyverse, sf, janitor and ggplot2 for data manipulation, spatial analysis and visualisation.
+
+**What worked well:**
+
+These packages integrated well and supported our workflow efficiently.
+
+**What was hard:**
+
+Working with sf objects required additional learning because spatial data behave differently from ordinary data frames.
+
+------------------------------------------------------------------------
+
+### Initial data analysis & data cleaning (W7)
+
+**What we did:**
+
+We cleaned multiple datasets, standardised district identifiers and combined population data with public toilet locations.
+
+**What worked well:**
+
+Cleaning the data early prevented many problems later in the project.
+
+**What was hard:**
+
+Different datasets used inconsistent variable names and formats, requiring extensive preprocessing.
+
+------------------------------------------------------------------------
+
+### Reproducibility, open data & renv (W9)
+
+**What we did:**
+
+We documented our workflow and worked with publicly available datasets so that the analysis could be reproduced.
+
+**What worked well:**
+
+Using open data increased transparency.
+
+**What was hard:**
+
+Some external datasets changed over time, making reproducibility more challenging.
+
+------------------------------------------------------------------------
+
+### Analysis & inference strategies (W10)
+
+**What we did:**
+
+Instead of comparing the absolute number of toilets, we calculated the number of toilets per 10,000 inhabitants for each district.
+
+**What worked well:**
+
+Population standardisation provided a fair comparison across districts.
+
+**What was hard:**
+
+Choosing an appropriate indicator required discussion because several alternatives were possible.
+
+------------------------------------------------------------------------
+
+### Communication & visualisation (W11)
+
+**What we did:**
+
+We created choropleth maps, summary tables and explanatory text to communicate our findings.
+
+**What worked well:**
+
+Maps made regional differences easy to understand.
+
+**What was hard:**
+
+Balancing visual simplicity with sufficient information required several iterations.
+
+------------------------------------------------------------------------
+
+## Key analytical decisions
+
+### Decision 1: Standardising by population
+
+Instead of comparing the total number of toilets, we calculated toilets per 10,000 inhabitants. This allowed meaningful comparisons between districts of different population sizes.
+
+**In hindsight, would we decide differently?**
+
+No. This was one of the most important methodological decisions in the project.
+
+------------------------------------------------------------------------
+
+### Decision 2: Using districts as the unit of analysis
+
+We aggregated toilet locations to Munich districts rather than analysing individual toilets.
+
+This simplified interpretation and allowed us to combine demographic information with spatial data.
+
+**In hindsight?**
+
+Yes, we would still make this decision.
+
+------------------------------------------------------------------------
+
+### Decision 3: Combining multiple open datasets
+
+We combined toilet data, district boundaries and population statistics.
+
+Although data integration required significant cleaning, it greatly improved the quality of the analysis.
+
+------------------------------------------------------------------------
+
+## Workflow & collaboration
+
+**How did we divide work across group members?**
+
+Tasks were divided between data collection, data cleaning, analysis, visualisation and report writing. Members communicated regularly to integrate their work into a single project.
+
+**What branching or Git workflow did we actually use?**
+
+We mainly worked through GitHub by committing changes regularly and synchronising the repository. The workflow was simpler than originally planned but sufficient for our project.
+
+**What would we change about how we coordinated?**
+
+Earlier coordination and more frequent communication would have reduced duplicated work and simplified integration.
+
+------------------------------------------------------------------------
+
+## LLM usage
+
+### Usage 1: Debugging R code
+
+**Tool / model**
+
+ChatGPT
+
+**What it produced**
+
+Suggestions for fixing join errors, data wrangling problems and ggplot code.
+
+**What we had to correct or verify**
+
+We verified every suggestion manually because some variable names and column references did not match our datasets.
+
+------------------------------------------------------------------------
+
+### Usage 2: Improving explanations
+
+**Tool / model**
+
+ChatGPT
+
+**What it produced**
+
+Suggestions for improving the wording of explanations and report sections.
+
+**What we had to correct or verify**
+
+We checked that all interpretations matched our own results rather than relying on generated text.
+
+------------------------------------------------------------------------
+
+### Usage 3: Quarto formatting
+
+**Tool / model**
+
+ChatGPT
+
+**What it produced**
+
+Suggestions for Quarto formatting and website organisation.
+
+**What we had to correct or verify**
+
+Some formatting suggestions required adjustment to fit our project structure.

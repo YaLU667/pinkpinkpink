@@ -12,6 +12,9 @@ website:
       - href: wcproject.qmd
         text: Analysis
 
+      - href: group-reflection.qmd
+        text: Group Reflection
+
 
 format:
   html:
