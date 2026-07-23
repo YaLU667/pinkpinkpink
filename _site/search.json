@@ -68,5 +68,61 @@
     "title": "Group Reflection",
     "section": "LLM usage",
     "text": "LLM usage\n\nUsage 1: Debugging R code\nTool / model\nChatGPT\nWhat it produced\nSuggestions for fixing join errors, data wrangling problems and ggplot code.\nWhat we had to correct or verify\nWe verified every suggestion manually because some variable names and column references did not match our datasets.\n\n\n\nUsage 2: Improving explanations\nTool / model\nChatGPT\nWhat it produced\nSuggestions for improving the wording of explanations and report sections.\nWhat we had to correct or verify\nWe checked that all interpretations matched our own results rather than relying on generated text.\n\n\n\nUsage 3: Quarto formatting\nTool / model\nChatGPT\nWhat it produced\nSuggestions for Quarto formatting and website organisation.\nWhat we had to correct or verify\nSome formatting suggestions required adjustment to fit our project structure."
+  },
+  {
+    "objectID": "individual-contribution.pdf.html",
+    "href": "individual-contribution.pdf.html",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "During this project, I mainly worked on the data preparation, data processing, and the development of the Quarto website.\nI cleaned and prepared the public toilet dataset and helped combine it with the population and district data. I also worked with spatial data using the sf package and calculated indicators such as the number of public toilets per 10,000 inhabitants. In addition, I created maps and figures that were used in the analysis.\nI contributed to building and improving the Quarto website, including editing the project structure, updating pages, and ensuring that the website rendered correctly. I also used Git and GitHub to manage project versions, upload changes, and resolve issues during collaboration.\n\n\n\nOne of the main challenges was working with different datasets that had different formats and variable names. It required careful data cleaning and checking before the datasets could be joined correctly. Another challenge was solving rendering and GitHub synchronization problems while preparing the final website.\n\n\n\nThis project helped me improve my practical skills in R, spatial data analysis, Quarto, and GitHub. I also learned how to collaborate in a group project and how to communicate technical problems effectively. Overall, the project gave me valuable experience in combining data analysis with reproducible reporting and collaborative workflows."
+  },
+  {
+    "objectID": "individual-contribution.pdf.html#my-contribution",
+    "href": "individual-contribution.pdf.html#my-contribution",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "During this project, I mainly worked on the data preparation, data processing, and the development of the Quarto website.\nI cleaned and prepared the public toilet dataset and helped combine it with the population and district data. I also worked with spatial data using the sf package and calculated indicators such as the number of public toilets per 10,000 inhabitants. In addition, I created maps and figures that were used in the analysis.\nI contributed to building and improving the Quarto website, including editing the project structure, updating pages, and ensuring that the website rendered correctly. I also used Git and GitHub to manage project versions, upload changes, and resolve issues during collaboration."
+  },
+  {
+    "objectID": "individual-contribution.pdf.html#challenges",
+    "href": "individual-contribution.pdf.html#challenges",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "One of the main challenges was working with different datasets that had different formats and variable names. It required careful data cleaning and checking before the datasets could be joined correctly. Another challenge was solving rendering and GitHub synchronization problems while preparing the final website."
+  },
+  {
+    "objectID": "individual-contribution.pdf.html#reflection",
+    "href": "individual-contribution.pdf.html#reflection",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "This project helped me improve my practical skills in R, spatial data analysis, Quarto, and GitHub. I also learned how to collaborate in a group project and how to communicate technical problems effectively. Overall, the project gave me valuable experience in combining data analysis with reproducible reporting and collaborative workflows."
+  },
+  {
+    "objectID": "individual-contribution.html",
+    "href": "individual-contribution.html",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "During this project, I mainly worked on the data preparation, data processing, and the development of the Quarto website.\nI cleaned and prepared the public toilet dataset and helped combine it with the population and district data. I also worked with spatial data using the sf package and calculated indicators such as the number of public toilets per 10,000 inhabitants. In addition, I created maps and figures that were used in the analysis.\nI contributed to building and improving the Quarto website, including editing the project structure, updating pages, and ensuring that the website rendered correctly. I also used Git and GitHub to manage project versions, upload changes, and resolve issues during collaboration.\n\n\n\nOne of the main challenges was working with different datasets that had different formats and variable names. It required careful data cleaning and checking before the datasets could be joined correctly. Another challenge was solving rendering and GitHub synchronization problems while preparing the final website.\n\n\n\nThis project helped me improve my practical skills in R, spatial data analysis, Quarto, and GitHub. I also learned how to collaborate in a group project and how to communicate technical problems effectively. Overall, the project gave me valuable experience in combining data analysis with reproducible reporting and collaborative workflows."
+  },
+  {
+    "objectID": "individual-contribution.html#my-contribution",
+    "href": "individual-contribution.html#my-contribution",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "During this project, I mainly worked on the data preparation, data processing, and the development of the Quarto website.\nI cleaned and prepared the public toilet dataset and helped combine it with the population and district data. I also worked with spatial data using the sf package and calculated indicators such as the number of public toilets per 10,000 inhabitants. In addition, I created maps and figures that were used in the analysis.\nI contributed to building and improving the Quarto website, including editing the project structure, updating pages, and ensuring that the website rendered correctly. I also used Git and GitHub to manage project versions, upload changes, and resolve issues during collaboration."
+  },
+  {
+    "objectID": "individual-contribution.html#challenges",
+    "href": "individual-contribution.html#challenges",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "One of the main challenges was working with different datasets that had different formats and variable names. It required careful data cleaning and checking before the datasets could be joined correctly. Another challenge was solving rendering and GitHub synchronization problems while preparing the final website."
+  },
+  {
+    "objectID": "individual-contribution.html#reflection",
+    "href": "individual-contribution.html#reflection",
+    "title": "Individual Contribution Statement",
+    "section": "",
+    "text": "This project helped me improve my practical skills in R, spatial data analysis, Quarto, and GitHub. I also learned how to collaborate in a group project and how to communicate technical problems effectively. Overall, the project gave me valuable experience in combining data analysis with reproducible reporting and collaborative workflows."
   }
 ]

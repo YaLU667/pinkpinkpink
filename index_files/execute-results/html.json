@@ -1,0 +1,17 @@
+{
+  "hash": "07d8a300b1cbdaa00b46ab43afae4b25",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Munich Public Toilets\"\nformat: \n  html:\n    code-fold: true\nexecute:\n  echo: false\n  warning: false\n  message: false\n---\n\n# \n\nThis project analyses the distribution of public toilets across Munich districts.\n\n## Research Question\n\n1.  How are public toilets distributed across Munich districts?\n\n2.  Which districts have the highest and lowest number of public toilets?\n\n3.  Is population density associated with public toilet availability?\n\n## Data\n\nWe use data on:\n\n-   public toilets in Munich\n-   population by district\n-   area and population density by district\n\n## Number of Public Toilets\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n## Public Toilets per 10,000 Residents\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n## Population Density and Public Toilets\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n## Top 10 Districts by number of Public Toilets\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-5-1.png){width=672}\n:::\n:::\n\n\n## Key Findings\n\n## Conclusion\n\nThe results suggest that population density is not strongly associated with the number of public toilets. Some districts with high population density have relatively few public toilets, while others have many. This indicates that factors others than population density may influence the distribution of public toilets in Munich. Future analyses could include tourist numbers, public transport hubs, or district size.\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

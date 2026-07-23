@@ -1,0 +1,28 @@
+---
+title: "Individual Contribution Statement"
+author: "Yaxuan Li"
+format:
+  pdf:
+    toc: false
+editor: visual
+---
+
+## My Contribution
+
+During this project, I mainly worked on data preparation, data processing, spatial analysis, and the development of the Quarto website.
+
+I cleaned and prepared the public toilet dataset and combined it with population and district-level data. I checked variable names and data types before joining the datasets and helped calculate indicators such as the number of public toilets per 10,000 inhabitants. I also worked with spatial data using the `sf` package and created maps and visualisations for the final analysis.
+
+In addition, I contributed to the structure and content of the Quarto website. I edited project pages, updated the navigation, checked whether the website rendered correctly, and used Git and GitHub to upload and manage changes. I also helped identify and solve technical problems related to data joins, spatial objects, website rendering, and GitHub synchronisation.
+
+## Challenges
+
+One major challenge was that the datasets used different variable names and data types. These differences initially caused problems when joining the population, district, and public toilet data. I therefore had to inspect the datasets carefully, standardise relevant variables, and check the resulting observations.
+
+Another challenge was preparing the final Quarto website and synchronising the local project with GitHub. This required checking the project structure, solving rendering problems, and making sure that the updated files were included in the repository.
+
+## Reflection
+
+The project improved my practical skills in R, data cleaning, spatial data analysis, visualisation, Quarto, Git, and GitHub. I learned that reproducible data analysis requires not only correct code but also careful file organisation, documentation, and version control.
+
+The group work also showed me the importance of clearly dividing responsibilities and communicating progress. Overall, the project gave me useful experience in developing a complete data-analysis workflow, from raw data preparation to the presentation of results on a reproducible website.
