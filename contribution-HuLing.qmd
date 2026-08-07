@@ -1,0 +1,41 @@
+---
+title: "Individual Contribution Statement"
+author: "Hu Ling"
+format:
+  pdf:
+    toc: false
+editor: visual
+---
+
+## My Contribution
+
+My primary responsibility in this project was the **data preparation, tidying, and initial quality assessment** phase. I focused on translating the raw, messy datasets into a clean, analysis-ready format for the team.
+
+Specifically, my contributions included:
+
+1. **Initial Data Exploration (IDA)**: 
+   I performed the first-pass exploration of the raw datasets using `glimpse()` and `summary()` to identify structural issues, such as mismatched variable names, missing values, and incorrect data types across the public toilet, population, and district datasets.
+
+2. **Defining the Tidy Data Logic**: 
+   I designed the core cleaning strategy for combining the three datasets. This included identifying the correct key variables for joining tables, planning how to handle missing values (e.g., districts with no toilet data), and determining that the dataset needed reshaping from a wide format into a long format to facilitate subsequent grouped calculations.
+
+3. **Data Validation**: 
+   After the initial merges, I reviewed the resulting data frames to verify that key indicators, such as the number of toilets per district, were logically consistent and that no duplication occurred during the joining process.
+
+4. **Reproducibility Setup**:
+   I structured my cleaning scripts to strictly read from the `data-raw/` folder and output processed data to the `data/` folder, ensuring the raw data remained untouched and the pipeline could be re-run by any team member.
+
+5. **Collaborative Workflow**:
+   I used Git to manage my local changes, submitted my early cleaning scoping as a draft pull request, and actively participated in team discussions regarding data inconsistencies and project structure adjustments.
+
+*Note: My initial cleaning scoping and draft scripts were later refined and integrated into the final `clean_clean.R` script by teammates as part of our collaborative workflow to ensure consistent coding style across the group.*
+
+## Challenges
+
+The biggest challenge I encountered was the inconsistency in variable naming and data formats across the three different source datasets. For example, district names were recorded differently in the population data compared to the toilet location data. To resolve this, I had to manually inspect each dataset, standardize the key columns (e.g., converting all district names to a single case and format), and rigorously check the join results to ensure the correct number of observations was retained.
+
+## Reflection
+
+This project deepened my understanding of the Tidy Data principles and the critical role that systematic data cleaning plays in any reproducible analysis. I learned that a well-structured data pipeline not only saves time downstream but also prevents silent errors during statistical testing and visualization.
+
+Working in a team setting with Git also taught me the importance of clear communication about data issues early in the project lifecycle. Identifying data quality problems during the cleaning phase allowed our team to adjust our research questions before diving into complex analyses. Overall, this experience gave me practical, hands-on exposure to the full lifecycle of real-world data wrangling.
